@@ -3,7 +3,6 @@ const liElements = document.querySelectorAll('li');
 
 function createElement(type) {
   const value = input.value;
-  console.log(value);
   const output = document.getElementById('generated-elements');
   const element = document.createElement('h' + type);
   element.textContent = value;
