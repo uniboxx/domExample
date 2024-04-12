@@ -1,0 +1,61 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+#title {
+  color: #333;
+  text-align: center;
+}
+
+ol {
+  padding: 25px;
+  font-size: 15px;
+  background-color: antiquewhite;
+  width: 50%;
+}
+
+ol > li {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px #333;
+}
+
+li:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+input {
+  display: block;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  width: 15rem;
+  margin: 2rem auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 1rem;
+  text-align: center;
+}
+
+#output {
+  margin-left: 10px;
+  text-align: left;
+}
+
+#generated-elements {
+  background-color: cadetblue;
+  height: 335px;
+  width: 800px;
+}
