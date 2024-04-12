@@ -9,8 +9,8 @@ function createElement(type) {
   element.textContent = value;
   output.appendChild(element);
 }
-// liElements.forEach((el, idx) => {
-//   el.addEventListener('click', ev => {
-//     createElement(idx + 1);
-//   });
-// });
+liElements.forEach((el, idx) => {
+  el.addEventListener('click', ev => {
+    createElement(idx + 1);
+  });
+});
