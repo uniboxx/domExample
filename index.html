@@ -8,7 +8,7 @@
       type="image/png"
       href="data:image/png;base64,iVBORw0KGgo=" />
     <link rel="stylesheet" href="style.css" />
-    <script type="module" src="script.js"></script>
+    <!-- <script type="module" src="script.js"></script> -->
     <title>CreateElement</title>
   </head>
   <body>
@@ -16,14 +16,26 @@
     <h2>Inserisci il testo che l'elemento deve contenere</h2>
     <input type="text" id="input" />
     <ol>
-      <li>Clicca qui per creare un H1 (Header)</li>
-      <li>Clicca qui per creare un H2 (Header)</li>
-      <li>Clicca qui per creare un H3 (Header)</li>
-      <li>Clicca qui per creare un H4 (Header)</li>
-      <li>Clicca qui per creare un H5 (Header)</li>
-      <li>Clicca qui per creare un H6 (Header)</li>
+      <li onclick="getEl(1)">Clicca qui per creare un H1 (Header)</li>
+      <li onclick="getEl(2)">Clicca qui per creare un H2 (Header)</li>
+      <li onclick="getEl(3)">Clicca qui per creare un H3 (Header)</li>
+      <li onclick="getEl(4)">Clicca qui per creare un H4 (Header)</li>
+      <li onclick="getEl(5)">Clicca qui per creare un H5 (Header)</li>
+      <li onclick="getEl(6)">Clicca qui per creare un H6 (Header)</li>
     </ol>
     <h1 id="output">OUTPUT:</h1>
     <div id="generated-elements"></div>
+    <script>
+      const input = document.getElementById('input');
+      const liElements = document.querySelectorAll('li');
+
+      function getEl(type) {
+        const text = `H${type}: ${input.value}`;
+        const output = document.getElementById('generated-elements');
+        const element = document.createElement('h' + type);
+        element.textContent = text;
+        output.insertAdjacentElement('beforeend', element);
+      }
+    </script>
   </body>
 </html>
